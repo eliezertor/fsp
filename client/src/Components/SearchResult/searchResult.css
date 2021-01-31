@@ -2,8 +2,30 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-flex .results__list {
+.results__list {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.results__list-img {
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.results__list-item {
+  margin: 2%;
+}
+.results__list-title {
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 auto;
+  width: 75%;
 }
 /*# sourceMappingURL=searchResult.css.map */

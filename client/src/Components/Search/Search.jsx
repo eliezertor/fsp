@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./search.scss";
 // import env from "react-dotenv";
 
 import SearchResult from "../SearchResult/SearchResult";
@@ -30,18 +31,28 @@ function Search() {
 
   return (
     <>
-      <div>
-        <form type="text" onSubmit={handleSubmit}>
-          <input
-            placeholder="Search for poop"
-            id="search"
-            type="text"
-            onChange={(e) => {
-              setSearch(e.target.value);
-            }}
-          />
-          <button type="submit">Search for</button>
-        </form>
+      <div className="search">
+        <div className="search__container-left">
+          <h2 className="search__slogan">Most people can watch anything. </h2>
+        </div>
+        <div className="search__container-right">
+          <form className="search__form" type="text" onSubmit={handleSubmit}>
+            <input
+              placeholder="Search for poop"
+              id="search"
+              type="text"
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+            />
+            <button type="submit">Search</button>
+          </form>
+          <div>
+            <p className="search__tag">
+              Check if the show or movie you want to watch is safe, for you.
+            </p>
+          </div>
+        </div>
       </div>
       <SearchResult result={searchResult} />
     </>

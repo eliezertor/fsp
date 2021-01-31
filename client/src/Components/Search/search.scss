@@ -1,0 +1,29 @@
+@import "../../styles/Partials/fonts";
+@import "../../styles/Partials/mixins";
+@import "../../styles/Partials/variables";
+
+.search {
+  height: 75vh;
+  background-image: url("../../assets/images/erik.png");
+  background-size: 120%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  &__slogan {
+    color: white;
+  }
+  &__container-left {
+    margin: 10% 0 0 10%;
+  }
+  &__container-right {
+    margin: 10% 10% 0 0;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__tag {
+    color: white;
+  }
+}

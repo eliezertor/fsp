@@ -1,0 +1,27 @@
+@import "../../styles/Partials/fonts";
+@import "../../styles/Partials/mixins";
+@import "../../styles/Partials/variables";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    align-items: center;
+    align-content: center;
+  }
+  &__list {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    align-content: center;
+    width: 20%;
+    justify-content: space-between;
+    margin-right: 1%;
+  }
+  &__links {
+    text-decoration: none;
+    color: black;
+    // margin: 0 5%;
+  }
+}

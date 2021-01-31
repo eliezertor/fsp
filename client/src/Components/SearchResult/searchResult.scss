@@ -1,7 +1,27 @@
+@import "../../styles/Partials/fonts";
+@import "../../styles/Partials/mixins";
+@import "../../styles/Partials/variables";
+
 .results {
   display: flex;
   flex-wrap: wrap;
   &__list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__list-img {
+    width: 40%;
+    object-fit: cover;
+  }
+  &__list-item {
+    // max-width: 50%;
+    margin: 2%;
+  }
+  &__list-title {
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 75%;
   }
 }

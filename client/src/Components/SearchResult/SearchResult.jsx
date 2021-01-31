@@ -13,22 +13,21 @@ function SearchResult(props) {
   return (
     <div>
       <div className="results">
-        {movies.map((movie) => {
-          // FIXME:   console.log(movie);
-          return (
-            <ul className="results__list">
+        <ul className="results__list">
+          {movies.map((movie) => {
+            return (
               <li className="results__list-item" key={movie.imdbID}>
-                <h3 className="results__list-title">Title:{movie.Title}</h3>
-                <h4 className="results__list-year">Year:{movie.Year}</h4>
+                <h4 className="results__list-year">{movie.Year}</h4>
                 <img
                   className="results__list-img"
                   src={movie.Poster}
                   alt={movie.Title}
                 />
+                <h3 className="results__list-title">{movie.Title}</h3>
               </li>
-            </ul>
-          );
-        })}
+            );
+          })}
+        </ul>
       </div>
     </div>
   );
