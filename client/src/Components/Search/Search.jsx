@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import env from "react-dotenv";
+// import env from "react-dotenv";
 
 import SearchResult from "../SearchResult/SearchResult";
 
@@ -9,7 +9,7 @@ let apiKey = "b9c1c16d";
 
 function Search() {
   const [search, setSearch] = useState({ searchData: "" });
-  const [searchResult, setSearchResult] = useState(undefined);
+  const [searchResult, setSearchResult] = useState([]);
 
   let handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +18,7 @@ function Search() {
     axios
       .get(omdb + "s=" + search + "=&apikey=" + apiKey)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setSearchResult(res.data);
       })
       .catch((err) => {

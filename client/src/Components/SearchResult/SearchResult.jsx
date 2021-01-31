@@ -1,25 +1,34 @@
-import React, { useEffect } from "react";
+import React from "react";
+import "./searchResult.scss";
 
 function SearchResult(props) {
-  console.log(props.result);
-  let title;
-  let poster;
+  let movies = [];
 
-  if (props.result !== undefined) {
+  if (props.result.Search) {
     props.result.Search.map((res) => {
-      console.log(res);
-      return (
-        (title = <h3>Title:{res.Title}</h3>),
-        (poster = <img src={res.Poster} alt="" />)
-      );
+      return movies.push(res);
     });
   }
 
   return (
     <div>
-      <div>
-        {title}
-        {poster}
+      <div className="results">
+        {movies.map((movie) => {
+          // FIXME:   console.log(movie);
+          return (
+            <ul className="results__list">
+              <li className="results__list-item" key={movie.imdbID}>
+                <h3 className="results__list-title">Title:{movie.Title}</h3>
+                <h4 className="results__list-year">Year:{movie.Year}</h4>
+                <img
+                  className="results__list-img"
+                  src={movie.Poster}
+                  alt={movie.Title}
+                />
+              </li>
+            </ul>
+          );
+        })}
       </div>
     </div>
   );
