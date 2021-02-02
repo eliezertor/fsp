@@ -3,25 +3,37 @@
 @import "../../styles/Partials/variables";
 
 .search {
-  height: 75vh;
+  height: 50vh;
   background-image: url("../../assets/images/erik.png");
-  background-size: 120%;
-  background-position: bottom;
+  background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
+  //   display: flex;
+  //   justify-content: space-between;
   &__slogan {
     color: white;
+    margin-top: 2%;
   }
   &__container-left {
-    margin: 10% 0 0 10%;
+    margin: 5% 0 0 5%;
   }
   &__container-right {
-    margin: 10% 10% 0 0;
+    margin: 15% 0 0 0;
+  }
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
   }
   &__form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  &__input {
+    margin-bottom: 5%;
   }
   &__tag {
     color: white;

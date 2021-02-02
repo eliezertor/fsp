@@ -5,10 +5,13 @@
 .results {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   &__list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
   }
   &__list-img {
     width: 40%;
@@ -23,5 +26,17 @@
     align-content: center;
     margin: 0 auto;
     width: 75%;
+  }
+  &__show-more-btn {
+    width: 50%;
+    align-self: center;
+    border: none;
+    background-color: transparent;
+  }
+  &__arrow {
+    width: 10%;
+  }
+  &__show-more-btn-hidden {
+    display: none;
   }
 }

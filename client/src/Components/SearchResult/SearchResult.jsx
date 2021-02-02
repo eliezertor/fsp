@@ -1,20 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import "./searchResult.scss";
+import arrow from "../../assets/icons/arrow-down.svg";
 
 function SearchResult(props) {
-  let movies = [];
+  let [showMoreMovies, setShowMoreMovies] = useState(false);
+  let list = document.getElementsByClassName("results__list-item");
+  let initialDisplay = 5;
+  let maxDisplay = 10;
+  let showMore = "results__show-more-btn";
+  let hidden = "results__show-more-btn-hidden";
 
+  //   Logic to loop over all the incoming movies and display them on the page
+  let movies = [];
   if (props.result.Search) {
-    props.result.Search.map((res) => {
-      return movies.push(res);
+    props.result.Search.map((data) => {
+      return movies.push(data);
     });
+  }
+
+  //   initial display only 5 items returned from api upon clicking show more arrow 10 items will be displayed
+  let initialView = [];
+  if (props.result.Search) {
+    initialView = movies.slice(0, 5);
+  }
+  console.log(initialView);
+
+  let showMoreResults = () => {
+    setShowMoreMovies(true);
+  };
+  console.log(showMoreMovies);
+
+  //   lets the value of what is to be displayed initially
+  let moreOrLess;
+  if (showMoreMovies === false) {
+    moreOrLess = initialView;
+  } else {
+    moreOrLess = movies;
+  }
+
+  console.log(moreOrLess);
+
+  let arrowDirection;
+
+  // loadMore displays a button to show more movies loaded from the api to a max of 10
+  let loadMore;
+  if (movies.length >= 1) {
+    loadMore = (
+      <button onClick={() => showMoreResults()} className={showMore}>
+        <img className="results__arrow" src={arrow} alt="down arrow" />
+      </button>
+    );
+  } else {
+    loadMore = (
+      <button className={hidden}>
+        <img className="results__arrow" src={arrow} alt="down arrow" />
+      </button>
+    );
   }
 
   return (
     <div>
       <div className="results">
         <ul className="results__list">
-          {movies.map((movie) => {
+          {moreOrLess.map((movie) => {
             return (
               <li className="results__list-item" key={movie.imdbID}>
                 <h4 className="results__list-year">{movie.Year}</h4>
@@ -28,6 +76,7 @@ function SearchResult(props) {
             );
           })}
         </ul>
+        {loadMore}
       </div>
     </div>
   );

@@ -37,15 +37,18 @@ function Search() {
         </div>
         <div className="search__container-right">
           <form className="search__form" type="text" onSubmit={handleSubmit}>
-            <input
-              placeholder="Search for poop"
-              id="search"
-              type="text"
-              onChange={(e) => {
-                setSearch(e.target.value);
-              }}
-            />
-            <button type="submit">Search</button>
+            <div className="search__input-container">
+              <input
+                className="search__input"
+                placeholder="Search for poop"
+                id="search"
+                type="text"
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                }}
+              />
+              <button type="submit">Search</button>
+            </div>
           </form>
           <div>
             <p className="search__tag">
