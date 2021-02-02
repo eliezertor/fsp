@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./searchResult.scss";
 import arrow from "../../assets/icons/arrow-down.svg";
+import upArrow from "../../assets/icons/up-arrow.svg";
 
 function SearchResult(props) {
   let [showMoreMovies, setShowMoreMovies] = useState(false);
@@ -23,13 +24,6 @@ function SearchResult(props) {
   if (props.result.Search) {
     initialView = movies.slice(0, 5);
   }
-  console.log(initialView);
-
-  let showMoreResults = () => {
-    setShowMoreMovies(true);
-  };
-  console.log(showMoreMovies);
-
   //   lets the value of what is to be displayed initially
   let moreOrLess;
   if (showMoreMovies === false) {
@@ -38,16 +32,28 @@ function SearchResult(props) {
     moreOrLess = movies;
   }
 
-  console.log(moreOrLess);
+  //   gives functionality to arrow
+  let showMoreResults = () => {
+    if (moreOrLess === initialView) {
+      setShowMoreMovies(true);
+    } else if (moreOrLess === movies) {
+      setShowMoreMovies(false);
+    }
+  };
 
   let arrowDirection;
+  if (showMoreMovies === false) {
+    arrowDirection = arrow;
+  } else {
+    arrowDirection = upArrow;
+  }
 
   // loadMore displays a button to show more movies loaded from the api to a max of 10
   let loadMore;
   if (movies.length >= 1) {
     loadMore = (
       <button onClick={() => showMoreResults()} className={showMore}>
-        <img className="results__arrow" src={arrow} alt="down arrow" />
+        <img className="results__arrow" src={arrowDirection} alt="down arrow" />
       </button>
     );
   } else {
