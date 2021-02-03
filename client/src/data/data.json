@@ -1,43 +1,73 @@
 {
   "movies": [
     {
-      "name": "Winnie the Pooh",
-      "year": "1984"
+      "Title": "Winnie the Pooh",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNjg5MjQzYTQtMTUzZC00NzlkLTgzZDEtMjg0OWY4NTNjNzJlXkEyXkFqcGdeQXVyNjI4MjU4MTY@._V1_SX300.jpg≈",
+      "Type": "movie",
+      "imdbID": "tt0076363",
+      "year": "1977"
     },
     {
-      "name": "Little Mermaid",
-      "year": "1990"
+      "Title": "Little Mermaid",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BN2JlZTBhYTEtZDE3OC00NTA3LTk5NTQtNjg5M2RjODllM2M0XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg",
+      "Type": "movie",
+      "imdbID": "tt0097757",
+      "year": "1989"
     },
     {
-      "name": "Lion King",
-      "year": "2001"
+      "Title": "Lion King",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg",
+      "Type": "movie",
+      "imdbID": "tt0110357",
+      "year": "1994"
     },
     {
-      "name": " Bonnie and Clyde",
-      "year": "1987"
+      "Title": "Bonnie and Clyde",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTViZmMwOGEtYzc4Yy00ZGQ1LWFkZDQtMDljNGZlMjAxMjhiXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg",
+      "Type": "movie",
+      "imdbID": "tt0061418",
+      "year": "1967"
     },
     {
-      "name": "Curious George",
+      "Title": "Curious George",
+      "Poster": "",
+      "Type": "",
+      "imdbID": "",
       "year": "2005"
     },
     {
-      "name": "Winnie the Pooh",
+      "Title": "Winnie the Pooh",
+      "Poster": "",
+      "Type": "",
+      "imdbID": "",
       "year": "1984"
     },
     {
-      "name": "Little Mermaid",
+      "Title": "Little Mermaid",
+      "Poster": "",
+      "Type": "",
+      "imdbID": "",
       "year": "1990"
     },
     {
-      "name": "Lion King",
+      "Title": "Lion King",
+      "Poster": "",
+      "Type": "",
+      "imdbID": "",
       "year": "2001"
     },
     {
-      "name": " Bonnie and Clyde",
+      "Title": " Bonnie and Clyde",
+      "Poster": "",
+      "Type": "",
+      "imdbID": "",
       "year": "1987"
     },
     {
-      "name": "Curious George",
+      "Title": "Curious George",
+      "Poster": "",
+      "Type": "",
+      "imdbID": "",
       "year": "2005"
     }
   ]

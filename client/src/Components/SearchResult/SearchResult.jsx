@@ -29,6 +29,7 @@ function SearchResult(props) {
     moreOrLess = movies;
   }
 
+  console.log(initialView);
   //   gives functionality to arrow
   let showMoreResults = () => {
     if (moreOrLess === initialView) {

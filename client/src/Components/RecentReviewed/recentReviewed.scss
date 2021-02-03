@@ -17,7 +17,12 @@
   }
   &__list {
     margin: 0;
+    padding: 0;
   }
   &__list-item {
+    list-style: none;
+  }
+  &__list-img {
+    width: 30%;
   }
 }

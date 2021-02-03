@@ -16,7 +16,7 @@ function TopList() {
             {data.movies.map((movie) => {
               return (
                 <li key={uuidv4()} className="top__best-item">
-                  {movie.name}
+                  {movie.Title}
                 </li>
               );
             })}
@@ -32,7 +32,7 @@ function TopList() {
             {data.movies.map((movie) => {
               return (
                 <li key={uuidv4()} className="top__best-item">
-                  {movie.name}
+                  {movie.Title}
                 </li>
               );
             })}
@@ -48,7 +48,7 @@ function TopList() {
             {data.movies.map((movie) => {
               return (
                 <li key={uuidv4()} className="top__best-item">
-                  {movie.name}
+                  {movie.Title}
                 </li>
               );
             })}
@@ -64,7 +64,7 @@ function TopList() {
             {data.movies.map((movie) => {
               return (
                 <li key={uuidv4()} className="top__best-item">
-                  {movie.name}
+                  {movie.Title}
                 </li>
               );
             })}
