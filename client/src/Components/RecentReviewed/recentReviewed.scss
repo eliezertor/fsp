@@ -2,4 +2,22 @@
 @import "../../styles/Partials/mixins";
 @import "../../styles/Partials/variables";
 
+.recent {
+  background-color: rgb(221, 220, 220);
+  padding-top: 5%;
 
+  &__title-container {
+  }
+  &__title {
+    margin-top: 0;
+    margin-left: 20px;
+    text-align: left;
+  }
+  &__list-container {
+  }
+  &__list {
+    margin: 0;
+  }
+  &__list-item {
+  }
+}

@@ -5,9 +5,6 @@ import upArrow from "../../assets/icons/up-arrow.svg";
 
 function SearchResult(props) {
   let [showMoreMovies, setShowMoreMovies] = useState(false);
-  let list = document.getElementsByClassName("results__list-item");
-  let initialDisplay = 5;
-  let maxDisplay = 10;
   let showMore = "results__show-more-btn";
   let hidden = "results__show-more-btn-hidden";
 
@@ -19,12 +16,12 @@ function SearchResult(props) {
     });
   }
 
-  //   initial display only 5 items returned from api upon clicking show more arrow 10 items will be displayed
+  //   initial displays 5 items returned from api upon clicking show more arrow 10 items will be displayed
   let initialView = [];
   if (props.result.Search) {
     initialView = movies.slice(0, 5);
   }
-  //   lets the value of what is to be displayed initially
+  //   sets the value of what is to be displayed initially
   let moreOrLess;
   if (showMoreMovies === false) {
     moreOrLess = initialView;
@@ -71,13 +68,13 @@ function SearchResult(props) {
           {moreOrLess.map((movie) => {
             return (
               <li className="results__list-item" key={movie.imdbID}>
+                <h3 className="results__list-title">{movie.Title}</h3>
                 <h4 className="results__list-year">{movie.Year}</h4>
                 <img
                   className="results__list-img"
                   src={movie.Poster}
                   alt={movie.Title}
                 />
-                <h3 className="results__list-title">{movie.Title}</h3>
               </li>
             );
           })}

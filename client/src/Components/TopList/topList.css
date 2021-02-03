@@ -1,0 +1,47 @@
+.top {
+  background: #fc4545;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fc4545), color-stop(48%, rgba(253, 29, 29, 0.1068802521)));
+  background: linear-gradient(0deg, #fc4545 0%, rgba(253, 29, 29, 0.1068802521) 48%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.top__container {
+  width: 40%;
+  margin: 5%;
+}
+.top__best {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.top__best-list {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+.top__best-item {
+  margin: 1% 0;
+  text-align: left;
+}
+/*# sourceMappingURL=topList.css.map */
